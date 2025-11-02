@@ -1,0 +1,367 @@
+# Real-Time Web Server Log Analysis - .gitignore
+
+# ============================================================================
+# Python
+# ============================================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# ============================================================================
+# Big Data & Analytics
+# ============================================================================
+
+# Generated data files
+data/
+temp/
+logs/
+output/
+processed/
+*.json
+*.csv
+*.parquet
+*.avro
+
+# But keep sample/demo files that are small
+!data/sample_*.json
+!data/demo_logs.json
+
+# Hadoop related
+hadoop-*/
+*.tar.gz
+*.tgz
+
+# Kafka related
+kafka_*/
+kafka-logs/
+zookeeper-logs/
+
+# Spark related
+spark-*/
+metastore_db/
+derby.log
+
+# ============================================================================
+# Docker & Containers
+# ============================================================================
+# Docker volumes and data
+docker-data/
+volumes/
+
+# Docker Compose override files
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# ============================================================================
+# IDE & Editors
+# ============================================================================
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ============================================================================
+# Operating System
+# ============================================================================
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ============================================================================
+# Project Specific
+# ============================================================================
+# Temporary files
+temp_logs_*.json
+*.tmp
+*.temp
+
+# Configuration overrides (keep templates)
+config/local_config.py
+config/production_config.py
+*_local.py
+*_prod.py
+
+# Generated scripts
+start-kafka.sh
+generate-sample-data.py
+
+# Runtime files
+*.pid
+*.lock
+
+# Backup files
+*.bak
+*.backup
+*_backup.*
+
+# Test outputs
+test_output/
+test_results/
+
+# Performance monitoring
+*.prof
+*.profile
+
+# ============================================================================
+# Security & Credentials
+# ============================================================================
+# API keys and secrets
+.env.local
+.env.production
+secrets/
+credentials/
+*.key
+*.pem
+*.p12
+*.pfx
+
+# ============================================================================
+# Documentation Build
+# ============================================================================
+# Sphinx build
+_build/
+_static/
+_templates/
+
+# ============================================================================
+# Miscellaneous
+# ============================================================================
+# Compressed files (except small samples)
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.bz2
+*.xz
+
+# But keep small demo archives if any
+!samples/*.zip
+!demo/*.tar.gz
+
+# Large media files
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Cache directories
+.cache/
+cache/
+__cache__/
+
+# Node.js (if any frontend components added later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ============================================================================
+# Keep Important Files
+# ============================================================================
+# Explicitly keep important configuration files
+!docker-compose.yml
+!hadoop.env
+!requirements.txt
+!README.md
+!SETUP_GUIDE.md
+!PROJECT_SUMMARY.md
+!start_demo.bat
+
+# Keep all Python source files
+!*.py
+
+# Keep configuration templates
+!config/config.py
+!config/__init__.py
+
+# Keep small sample data files (under 1MB)
+!data/sample_*.json
